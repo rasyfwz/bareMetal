@@ -1,7 +1,9 @@
+#include <stdint.h>
+
 #define GPIOA_BASE 0x40020000
 #define GPIOB_BASE 0x40020400
 #define RCC_BASE 0x40023800
-
+#define USART2_BASE 0x40004400
 
 typedef struct {
 	volatile uint32_t MODER;
@@ -15,7 +17,7 @@ typedef struct {
 	volatile uint32_t AFRL;
 	volatile uint32_t AFRH;
 
-}; GPIO_TypeDef;
+} GPIO_TypeDef;
 
 typedef struct {
 	volatile uint32_t CR;
@@ -40,4 +42,15 @@ typedef struct {
 	volatile uint32_t PLLI2SCFGR;
 	volatile uint32_t DCKCFGR;
 
-};	RCC_TypeDef;
+} RCC_TypeDef;
+
+typedef struct {
+	volatile uint32_t SR;
+	volatile uint32_t DR;
+	volatile uint32_t BRR;
+	volatile uint32_t CR1;
+	volatile uint32_t CR2;
+	volatile uint32_t CR3;
+	volatile uint32_t GTPR;
+
+} USART_TypeDef;
