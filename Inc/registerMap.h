@@ -26,8 +26,10 @@ typedef struct {
 	volatile uint32_t CIR;
 	volatile uint32_t AHB1RSTR;
 	volatile uint32_t AHB2RSTR;
+	volatile uint32_t RESERVED0[2];
 	volatile uint32_t APB1RSTR;
 	volatile uint32_t APB2RSTR;
+	volatile uint32_t RESERVED1[2];
 	volatile uint32_t AHB1ENR;
 	volatile uint32_t AHB2ENR;
 	volatile uint32_t APB1ENR;

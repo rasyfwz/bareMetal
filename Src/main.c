@@ -36,17 +36,16 @@ void UART_Transmit_Data(char *word) {
 
 int main () {
 	GPIOA_Init();
-	UART_Init();
-	char *send = "Hello World!\n";
+//	UART_Init();
+//	char *send = "Hello World!\n";
 
 
 	for (;;) {
 		GPIOA->ODR ^= (1U << 5);
-		UART_Transmit_Data(send);
+//		UART_Transmit_Data(send);
 	}
 	return 0;
 
 }
-
 
 
