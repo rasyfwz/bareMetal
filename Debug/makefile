@@ -59,8 +59,8 @@ all: main-build
 main-build: bareMetal.elf secondary-outputs
 
 # Tool invocations
-bareMetal.elf bareMetal.map: $(OBJS) $(USER_OBJS) /home/rasya-fawwaz/STM32CubeIDE/workspace_2.1.0/bareMetal/STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "bareMetal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/rasya-fawwaz/STM32CubeIDE/workspace_2.1.0/bareMetal/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bareMetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+bareMetal.elf bareMetal.map: $(OBJS) $(USER_OBJS) C:\Users\kadim\STM32CubeIDE\workspace_2.1.1\bareMetal\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "bareMetal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\kadim\STM32CubeIDE\workspace_2.1.1\bareMetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bareMetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
